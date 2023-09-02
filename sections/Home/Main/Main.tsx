@@ -40,7 +40,7 @@ const image = {
 
 const Main = () => {
   return (
-    <section className="md:relative flex justify-center items-center max-md:h-screen max-md:min-h-[800px] md:pt-[240px] md:pb-[440px]">
+    <section className="md:relative flex justify-center items-center max-md:h-screen md:pt-[240px] md:pb-[440px]">
       <div className="relative z-50 flex">
         <motion.p
           initial={{ opacity: 0 }}
