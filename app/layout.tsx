@@ -1,9 +1,8 @@
 import Navigation from "@/components/Navigation";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import Image from "next/image";
+import ScrollBadge from "@/components/ScrollBadge";
 
 const eudoxus = localFont({
   src: [
@@ -28,9 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${eudoxus.className} relative overflow-hidden`}>
+      <body className={`${eudoxus.className} relative `}>
         <Navigation />
         {children}
+        <ScrollBadge />
       </body>
     </html>
   );

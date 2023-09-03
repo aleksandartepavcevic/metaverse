@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import { Variants, motion } from "framer-motion";
+import { Variants, motion, useScroll, useTransform } from "framer-motion";
 
 import spaceImage from "@/public/home-main.webp";
 
@@ -39,16 +39,22 @@ const image = {
 } as Variants;
 
 const Main = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
   return (
-    <section className="md:relative flex justify-center items-center max-md:h-screen md:pt-[240px] md:pb-[440px]">
+    <section
+      ref={ref}
+      className="relative flex justify-center items-center max-md:h-screen md:pt-[240px] md:pb-[440px]"
+    >
       <div className="relative z-50 flex">
-        <motion.p
+        <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 3.8, duration: 1 } }}
-          className="absolute top-0 md:-left-[110px] md:top-[40px] text-gray-300/50 border-l-2 border-gray-300/50 pl-1 leading-4"
+          className="absolute top-[-2vw] xl:-left-[110px] xl:top-[40px] text-gray-300/50 border-l-2 border-gray-300/50 pl-1 leading-4"
         >
           Home
-        </motion.p>
+        </motion.span>
         <motion.svg
           fill="none"
           width="794"
@@ -161,10 +167,11 @@ const Main = () => {
         </motion.svg>
       </div>
       <motion.div
+        style={{ y }}
         variants={image}
         initial="hidden"
         animate="visible"
-        className="absolute bottom-0 overflow-hidden right-0 w-[90vw] h-[400px] rounded-ss-[180px] rounded-es-[10px] md:w-full md:h-[485px] md:rounded-ss-[8.75rem] md:rounded-es-[2.5rem] md:rounded-se-2xl md:rounded-ee-2xl"
+        className="absolute transform-gpu bottom-0 right-0 overflow-hidden w-[80vw] h-[40vh] rounded-ss-[180px] rounded-es-[10px] md:w-full md:h-[485px] md:rounded-ss-[8.75rem] md:rounded-es-[2.5rem] rounded-se-2xl rounded-ee-2xl"
       >
         <Image src={spaceImage} alt="Space" objectFit="cover" fill />
       </motion.div>

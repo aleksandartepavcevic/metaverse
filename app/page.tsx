@@ -1,9 +1,10 @@
-import Main from "@/sections/Home/Main";
 import Image from "next/image";
 
+import Main from "@/sections/Home/Main";
+import About from "@/sections/Home/About";
+import PageWrapper from "@/components/PageWrapper";
 import bgGradient1 from "@/public/bg-gradient-1.webp";
 import bgGradient2 from "@/public/bg-gradient-2.webp";
-import PageWrapper from "@/components/PageWrapper";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
               className="select-none"
             />
           </div>
+          <About />
         </div>
       </main>
     </PageWrapper>
