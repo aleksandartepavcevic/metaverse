@@ -31,6 +31,7 @@ export default function Home() {
             />
           </div>
           <About />
+          <About />
         </div>
       </main>
     </PageWrapper>

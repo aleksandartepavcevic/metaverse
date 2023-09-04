@@ -6,7 +6,7 @@ import ArrowIcon from "@/components/ArrowIcon";
 
 const parentAnimation = {
   visible: {
-    transition: { staggerChildren: 0.2 },
+    transition: { staggerChildren: 0.5 },
   },
 } as Variants;
 
@@ -19,6 +19,7 @@ const childAnimation = {
     y: 0,
     opacity: 1,
     transition: {
+      duration: 0.8,
       ease: [0.17, 0.55, 0.55, 1],
     },
   },
@@ -26,7 +27,7 @@ const childAnimation = {
 
 const About = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "200px 0px 0px 0px" });
+  const isInView = useInView(ref, { once: true, margin: "240px 0px 0px 0px" });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const About = () => {
       animate={controls}
       variants={parentAnimation}
       ref={ref}
-      className="relative flex flex-col md:items-center gap-4 md:gap-2 mt-[80px] lg:mt-[200px]"
+      className="relative flex flex-col md:items-center gap-4 mt-[80px] lg:mt-[200px]"
     >
       <motion.span
         variants={childAnimation}

@@ -31,8 +31,8 @@ const image = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 4,
-      duration: 1,
+      delay: 3.65,
+      duration: 1.33,
       ease: "easeInOut",
     },
   },
