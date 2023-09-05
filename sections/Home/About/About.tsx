@@ -6,7 +6,7 @@ import ArrowIcon from "@/components/ArrowIcon";
 
 const parentAnimation = {
   visible: {
-    transition: { staggerChildren: 0.5 },
+    transition: { staggerChildren: 0.33 },
   },
 } as Variants;
 
@@ -65,7 +65,9 @@ const About = () => {
         <span className="text-white font-bold">explore</span> the madness of the
         metaverse by scrolling down
       </motion.p>
-      <ArrowIcon className="mt-4" />
+      <motion.div variants={childAnimation}>
+        <ArrowIcon className="mt-4" />
+      </motion.div>
     </motion.div>
   );
 };

@@ -1,10 +1,11 @@
 import Image from "next/image";
 
-import Main from "@/sections/Home/Main";
-import About from "@/sections/Home/About";
 import PageWrapper from "@/components/PageWrapper";
 import bgGradient1 from "@/public/bg-gradient-1.webp";
 import bgGradient2 from "@/public/bg-gradient-2.webp";
+import Main from "@/sections/home/Main";
+import About from "@/sections/home/About";
+import World from "@/sections/home/World";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
             />
           </div>
           <About />
-          <About />
+          <World />
         </div>
       </main>
     </PageWrapper>
