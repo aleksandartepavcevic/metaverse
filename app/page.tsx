@@ -3,9 +3,9 @@ import Image from "next/image";
 import PageWrapper from "@/components/PageWrapper";
 import bgGradient1 from "@/public/bg-gradient-1.webp";
 import bgGradient2 from "@/public/bg-gradient-2.webp";
-import Main from "@/sections/home/Main";
 import About from "@/sections/home/About";
 import World from "@/sections/home/World";
+import Main from "@/sections/home/Main";
 
 export default function Home() {
   return (
