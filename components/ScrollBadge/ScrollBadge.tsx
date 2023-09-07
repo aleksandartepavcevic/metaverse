@@ -16,7 +16,7 @@ const ScrollBadge = () => {
   });
 
   return (
-    <div className="fixed bottom-[2rem] right-[2rem] flex justify-center items-center w-[154px] h-[154px] rounded-full bg-white/25 drop-shadow-md backdrop-blur-xl">
+    <div className="fixed z-[49] bottom-[2rem] right-[2rem] flex justify-center items-center w-[154px] h-[154px] rounded-full bg-white/25 drop-shadow-md backdrop-blur-xl">
       <Image src={mouseIcon} alt="Mouse icon" width={24} height={24} />
       {/* <motion.div
         style={{ rotateZ }}
