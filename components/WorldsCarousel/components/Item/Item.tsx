@@ -97,7 +97,7 @@ const Item = ({ data, handleClick, isActive }: ItemProps) => {
                 variants={inactiveVariants}
                 custom={4}
                 key={`inactiveName-${data.id}`}
-                className="absolute z-10 w-0 bottom-8 left-1/2 whitespace-nowrap text-3xl font-bold max-lg:w-[unset] max-md:text-2xl"
+                className="absolute z-10 w-0 bottom-8 left-1/2 whitespace-nowrap text-3xl font-bold text-white max-lg:w-[unset] max-md:text-2xl"
               >
                 {data.name}
               </motion.span>
